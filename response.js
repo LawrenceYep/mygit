@@ -41,9 +41,9 @@ body = {
 		}
 	},
 	"errorText": "1",
-	"errorDetail": JSON.stringify(headers)
+	"errorDetail": ""
 };
 body = JSON.stringify(body);
-$done(headers);
-$done(body);
+
+$done(headers,body);
 
