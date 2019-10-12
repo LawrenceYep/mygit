@@ -5,22 +5,17 @@
 var statusCode = $response.statusCode;
 var headers = $response.headers;
 var body = $response.body;
-console.log(headers)
+
 statusCode = 200;
 
+headers['Access-Control-Allow-Origin'] = '*';
+headers['Cache-Control'] = 'private';
+headers['Content-Type'] = 'text/html';
+headers['charset'] = 'UTF-8';
+headers['errorCode'] = 0;
 
 
-var obj = JSON.parse(body);
-header['Access-Control-Allow-Origin'] = '*';
-header['Cache-Control'] = 'private';
-header['Content-Type'] = 'text/html';
-header['charset'] = 'UTF-8';
-header['errorCode'] = 0;
-headers = JSON.stringify(header);
-
-
-
-obj = {
+body = {
 	"errorCode": 0,
 	"result": {
 		"service": {
@@ -53,6 +48,6 @@ obj = {
 	"errorText": "1",
 	"errorDetail": ""
 };
-body = JSON.stringify(obj);
+
 $done(statusCode,headers,body);
 
