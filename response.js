@@ -15,6 +15,7 @@ header['Access-Control-Allow-Origin'] = '*';
 header['Cache-Control'] = 'private';
 header['Content-Type'] = 'text/html';
 header['charset'] = 'UTF-8';
+header['errorCode'] = 0;
 headers = JSON.stringify(header);
 
 
@@ -39,7 +40,7 @@ obj = {
 		},
 		"endBanner": {},
 		"basePlate": [],
-		"country": "HK",
+		"country": "CN",
 		"termsAgree": [],
 		"isPrivacyConsigned": -1,
 		"useLocalPolicy": ["0", "0"],
