@@ -5,11 +5,11 @@
 var statusCode = $response.statusCode;
 var headers = $response.headers;
 var body = $response.body;
-
+console.log(headers)
 statusCode = 200;
 
 
-var header = JSON.parse(headers);
+
 var obj = JSON.parse(body);
 header['Access-Control-Allow-Origin'] = '*';
 header['Cache-Control'] = 'private';
