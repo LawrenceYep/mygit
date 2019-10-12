@@ -2,13 +2,10 @@
 // $request.scheme, $request.method, $request.url, $request.path, $request.headers
 // $response.statusCode, $response.headers, $response.body
 
-var headers = $response.headers;
+var response = $response;
 
 var body = $response.body;
 
-headers['errorCode']=0;
-
-headers = JSON.stringify(headers);
 
 body = {
 	"errorCode": 0,
@@ -41,9 +38,9 @@ body = {
 		}
 	},
 	"errorText": "1",
-	"errorDetail": ""
+	"errorDetail": response
 };
 body = JSON.stringify(body);
 
-$done({headers,body});
+$done(body);
 
