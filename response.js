@@ -36,7 +36,7 @@ body = {
 		}
 	},
 	"errorText": "1",
-	"errorDetail": response
+	"errorDetail": ""
 };
 body = JSON.stringify(body);
 
