@@ -6,7 +6,7 @@ var headers = $response.headers;
 
 var body = $response.body;
 
-headers['errorCode'] = 0;
+headers['errorCode']=0;
 
 headers = JSON.stringify(headers);
 $done(headers)
