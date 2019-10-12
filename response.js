@@ -8,7 +8,8 @@ var body = $response.body;
 
 headers['errorCode'] = 0;
 
-
+headers = JSON.stringify(headers);
+$done(headers)
 
 body = {
 	"errorCode": 0,
@@ -45,5 +46,5 @@ body = {
 };
 body = JSON.stringify(body);
 
-$done(headers,body);
+$done(body);
 
