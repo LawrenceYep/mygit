@@ -3,6 +3,7 @@
 // $response.statusCode, $response.headers, $response.body
 
 var headers = $response.headers;
+console.log(JSON.stringify(headers));
 var body = $response.body;
 
 headers['errorCode'] = 0;
