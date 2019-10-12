@@ -3,7 +3,7 @@
 // $response.statusCode, $response.headers, $response.body
 
 var headers = $response.headers;
-$notify(‘1’, ‘2’, JSON.stringify(headers));
+
 var body = $response.body;
 
 headers['errorCode'] = 0;
@@ -41,7 +41,7 @@ body = {
 		}
 	},
 	"errorText": "1",
-	"errorDetail": ""
+	"errorDetail": JSON.stringify(headers)
 };
 body = JSON.stringify(body);
 $done(headers);
