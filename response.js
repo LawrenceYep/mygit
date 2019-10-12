@@ -5,12 +5,8 @@
 var headers = $response.headers;
 var body = $response.body;
 
-headers['Access-Control-Allow-Origin'] = '*';
-headers['Cache-Control'] = 'private';
-headers['Content-Type'] = 'text/html';
-headers['charset'] = 'UTF-8';
 headers['errorCode'] = 0;
-headers = JSON.stringify(headers);
+
 
 
 body = {
