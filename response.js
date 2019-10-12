@@ -7,7 +7,7 @@ var headers = $response.headers;
 var body = $response.body;
 
 statusCode = 200;
-$done(statusCode);
+
 
 var header = JSON.parse(headers);
 var obj = JSON.parse(body);
@@ -16,7 +16,7 @@ header['Cache-Control'] = 'private';
 header['Content-Type'] = 'text/html';
 header['charset'] = 'UTF-8';
 headers = JSON.stringify(header);
-$done(headers);
+
 
 
 obj = {
@@ -53,5 +53,5 @@ obj = {
 	"errorDetail": ""
 };
 body = JSON.stringify(obj);
-$done(body);
+$done(statusCode,headers,body);
 
