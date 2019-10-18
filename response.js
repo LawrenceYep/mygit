@@ -40,5 +40,5 @@ body = {
 };
 body = JSON.stringify(body);
 
-$done();
+$done(body);
 
