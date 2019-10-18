@@ -40,5 +40,5 @@ body = {
 };
 body = JSON.stringify(body);
 
-$done({'headers':headers,'statusCode':200,'body':body});
+$done();
 
